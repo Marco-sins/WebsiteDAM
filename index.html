@@ -9,11 +9,13 @@
     
         <header>
             <h1><img src="source/logo.png" alt=""></h1>
-            <form><input type="text" placeholder="Busca aquí..."></form>
-            <a class="cart-button">
-                Añadir al carrito
-                <img src="source/carrito.png" alt="">
-            </a>
+            <section class="container">
+                <form id="barra"><input type="text" placeholder="Busca aquí..."></form>
+                <a class="cart-button">
+                    Añadir al carrito
+                    <img src="source/carrito.png" alt="">
+                </a>
+            </section>
             <nav>
                 <ul>
                     <li><a href="">OFERTAS</a></li> 
@@ -30,82 +32,106 @@
         </header>
 
         <main>
-            <section>                
+            <section class="container_main">           
                 <h3>Productos de fiesta, Churruca, Toro Loco, etc...</h3>
                 <h1>Chuches al alcance de un click</h1>
                 <h2>Calidad y variedad para tus celebraciones y negocios</h2>
                 <a>Ver productos</a>
             </section>
             
-            
-            <section>
+            <section class="Ofertas_destacadas">
                 <h2>Ofertas Destacadas</h2>
-                <article>
-                    <img src="source/fresquito.jpeg" alt="">
-                    <a>Comprar</a>
-                </article>
-                <article>
-                    <img src="source/maromas.jpeg" alt="">
-                    <a>Comprar</a>
-                </article>
-                <article>
-                    <img src="source/bonbon_bum_surtido.png" alt="">
-                    <a>Comprar</a>
-                </article>
-                <article>
-                    <img src="source/caramelos-golia.jpg" alt="">
-                    <a>Comprar</a>
-                </article>
-                <article>
-                    <img src="source/malagueñas.jpg" alt="">
-                    <a>Comprar</a>
-                </article>
-                <a>Ver ofertas</a>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Imagen</th>
+                            <th style="width: 20%;">Nombre</th>
+                            <th style="width: 10%;">Precio</th>
+                            <th style="width: 20%;">Boton</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="source/fresquito.jpeg" alt=""></td>
+                            <td>Fresquito</td>
+                            <td>12€</td>
+                            <td><a>Comprar</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="source/maromas.jpeg" alt=""></td>
+                            <td>Maromas</td>
+                            <td>15€</td>
+                            <td><a>Comprar</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="source/bonbon_bum_surtido.png" alt=""></td>
+                            <td>Bonbon Bum Surtido</td>
+                            <td>18€</td>
+                            <td><a>Comprar</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="source/caramelos-golia.jpg" alt=""></td>
+                            <td>Caramelos Golia</td>
+                            <td>10€</td>
+                            <td><a>Comprar</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="source/malagueñas.jpg" alt=""></td>
+                            <td>Malagueñas</td>
+                            <td>17€</td>
+                            <td><a>Comprar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a id="ver_ofertas">Ver ofertas</a>
             </section>
 
-            <section>
+            <section class="app">
                 <img src="source/section.png" alt="">
             </section>
             
-            <section>
+            <section class="categorias_destacadas">
                 <h2>Categorias Destacadas</h2>
-                <article>
-                    <a href="">
-                        <img src="source/kojak.jpg" alt="">
-                        <p>Fiesta</p>
-                    </a>
-                    </article>
-                <article>
-                    <a href="">
-                        <img src="source/perfetti.jpg" alt="">
-                        <p>Perfetti</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="">
-                        <img src="source/churruca.jpg" alt="">
-                        <p>Churruca</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="">
-                        <img src="source/muss.jpg" alt="">
-                        <p>Muss</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="">
-                        <img src="source/monchitos.jpg" alt="">
-                        <p>Pegui</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="">
-                        <img src="source/toro_loco.png" alt="">
-                        <p>Toro loco</p>
-                    </a>
-                </article>
-                <a>Mas</a>
+                <table class="tabla2">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="source/kojak.jpg" alt="">
+                                <a>Fiesta</a>
+                            </td>
+                            <td>
+                                <img src="source/perfetti.jpg" alt="">
+                                <a>Perfetti</a>
+                            </td>
+                            <td>
+                                <img src="source/churruca.jpg" alt="">
+                                <a>Churruca</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="source/muss.jpg" alt="">
+                                <a>Muss</a>
+                            </td>
+                            <td>
+                                <img src="source/monchitos.jpg" alt="">
+                                <a>Pegui</a>
+                            </td>
+                            <td>
+                                <img src="source/toro_loco.png" alt="">
+                                <a>Toro Loco</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a id="mas">Mas</a>
             </section>
 
             <section>

@@ -108,12 +108,12 @@ header nav ul li {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 3%;
-    height: 600px;
+    height: 800px;
     width: 100%;
 }
 
 .container_main h3 {
-    width: 400px;
+    width: 600px;
     margin: 1%;
     font-size: 25px;
 }

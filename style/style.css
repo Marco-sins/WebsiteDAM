@@ -1,11 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    /*overflow-x: hidden;*/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
     background-color: red;
+
+}
+
+#logo_barra {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
 }
 
 header h1 {
@@ -14,11 +22,13 @@ header h1 {
     margin-top: 0;
     margin-left: 50px;
     padding-top: 25px;
+    flex: 1;
 }
 
 header h1 img {
     width: 175px;
     height: 128px;
+    margin: 0;
 }
 
 header nav {
@@ -26,6 +36,7 @@ header nav {
     height: 40px;
     text-align: center;
     background-color: white;
+    width: 100%;
 }
 
 header nav ul {
@@ -40,11 +51,28 @@ header nav ul li {
     margin-right: 50px;
 }
 
+header nav ul li a {
+    font-size: 24px;
+    padding: 5px 10px;
+    transition: background-color 0.8s;
+    border-radius: 100px;
+}
+
+header nav ul li a:hover {
+    background-color: red;
+    color: white;
+}
+
 .container {
     display: flex;
     align-items: center;
-    gap: 20px;  
-    width: 100%; 
+    gap: 5px;  
+    width: 100%;
+    flex: 1;
+}
+
+.container form {
+    margin-right: 20px;
 }
 
 #barra {
@@ -54,6 +82,7 @@ header nav ul li {
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
+    flex: 1;
 }
 
 #barra input {
@@ -77,28 +106,34 @@ header nav ul li {
     font-style: italic;
 }
 
+#user {
+    margin-right: 20px;
+    transition: 0.8s;
+    border-radius: 50px;
+    padding: 10px 10px;
+}
+
+#user:hover {
+    background-color: white;
+}
+
+
 .cart-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
+    padding: 10px 10px;
     color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    border-radius: 50px;
+    transition: background-color 0.8s;
     gap: 10px;
+    
 }
 
 .cart-button img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .cart-button:hover {
     background-color: white;
-    border: 2px solid red;
-    color: red;
 }
 
 .container_main {
@@ -110,6 +145,7 @@ header nav ul li {
     padding: 3%;
     height: 800px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .container_main h3 {
@@ -135,7 +171,7 @@ header nav ul li {
     margin: 1%;
     font-size: 18px;
     transition: background-color 0.3s;
-    border-radius: 8px;
+    border-radius: 100px;
     padding: 10px 15px;
     background-color: red;
     color: white;
@@ -169,10 +205,10 @@ header nav ul li {
 .tabla a {
     background-color: red;
     color: white;
-    border-radius: 8px;
+    border-radius: 100px;
     padding: 10px 15px;
     transition: background-color 0.3s;
-
+    border: 2px solid white;
 }
 
 .tabla a:hover {
@@ -184,13 +220,14 @@ header nav ul li {
 #ver_ofertas {
     background-color: red;
     color: white;
-    border-radius: 8px;
+    border-radius: 100px;
     padding: 10px 15px;
     transition: background-color 0.3s;
     display: inline-block;
     justify-content: center;
     align-items: center;
     width: 400px;
+    border: 2px solid white;
 }
 
 #ver_ofertas:hover {
@@ -200,8 +237,13 @@ header nav ul li {
 }
 
 .app {
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.app img {
+    width: 100%;
 }
 
 .categorias_destacadas {
@@ -230,13 +272,14 @@ header nav ul li {
 .tabla2 td a {
     background-color: red;
     color: white;
-    border-radius: 8px;
+    border-radius: 100px;
     padding: 10px 15px;
     transition: background-color 0.3s;
     display: inline-block;
     justify-content: center;
     align-items: center;
     width: 350px;
+    border: 2px solid white;
 }
 
 .tabla2 td a:hover {
@@ -256,10 +299,154 @@ header nav ul li {
     justify-content: center;
     align-items: center;
     width: 200px;
+    border: 2px solid white;
 }
 
 #mas:hover {
     background-color: white;
     color: green;
     border: 2px solid green;
+}
+
+#ultimas_ofertas {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#algodon {
+    background-image: url("/source/algodon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex: 1;
+    padding: 20px;
+}
+
+#algodon h5 {
+    font-size: 70px;
+}
+
+#algodon h4 {
+    padding-top: 5px;
+    margin-top: 40px;
+    margin-bottom: 200px;
+    font-size: 60px;
+}
+
+#algodon a {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    transition: background-color 0.8s;
+}
+
+#algodon a:hover {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+#sandias {
+    background-image: url("/source/sandias.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex: 1;
+    padding: 20px;
+}
+
+#sandias h2 {
+    font-size: 60px;
+    margin-bottom: 255px;
+}
+
+#sandias a {
+    background-color: red;
+    color: white;
+    transition: background-color 0.8s;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#sandias a:hover {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+#ultimas_ayudas {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#camion {
+    flex: 1;
+    text-align: center;
+}
+
+#atencion_cliente {
+    flex: 1;
+    text-align: center;
+}
+
+#compra_cualquier_lugar {
+    flex: 1;
+    text-align: center;
+}
+
+footer {
+    background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+    height: 400px;
+}
+
+#logo {
+    flex: 1;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#ayuda {
+    flex: 1;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#ayuda ul {
+    list-style-type: none;
+    padding: 15px;
+}
+
+#terminos {
+    flex: 1;
+    padding-top: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#terminos ul {
+    list-style-type: none;
+    padding: 15px;
+}
+
+#pagos {
+    flex: 1;
+    text-align: center;
+    margin-top: 50px;
 }

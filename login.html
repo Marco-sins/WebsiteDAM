@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/style/login.css">
-    <title>Modern Login Page | AsmrProg</title>
+    <title>Login - Fiesta</title>
 </head>
 
 <body>
@@ -14,33 +14,42 @@
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form>
-                <h1>Create Account</h1>
+                <h1>Crear Cuenta</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <span>or use your email for registeration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <span>o utiliza tu correo electrónico para registrarte</span>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <span class="tick">✅</span>
+                <span class="cross">❌</span>
+                <input type="password" placeholder="Password" required pattern=".{8,}">
+                <p id="mensaje-contraseña">La contraseña debe tener al menos 8 caracteres</p>
+                <label id="condiciones">
+                    <input type="checkbox" name="acepto" required>
+                    <p>He leido y aceptado los términos y condiciones</p>
+                </label>
                 <button>Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
             <form>
-                <h1>Sign In</h1>
+                <h1>Iniciar Sesión</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
+                <span>o usa la contraseña de su email</span>
+                <input type="email" placeholder="Email" required>
+                <span class="tick">✅</span>
+                <span class="cross">❌</span>
+                <input id="contraseña-registro" type="password" placeholder="Password" required>
+                <a href="#">He olvidado mi contraseña</a>
                 <button>Sign In</button>
             </form>
         </div>
@@ -48,12 +57,12 @@
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
+                    <p>Introduzca sus datos personales para utilizar todas las funciones del sitio.</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
+                    <p>Regístrese con sus datos personales para utilizar todas las funciones del sitio.</p>
                     <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>

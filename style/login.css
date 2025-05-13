@@ -208,3 +208,57 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+#condiciones {
+    height: 50px;
+    margin: 20px 0;
+    display: inline-flex;
+}
+
+#condiciones input {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 20px;
+}
+
+#condiciones p {
+    font-size: 9px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.tick, .cross {
+    position: absolute;
+    right: 0.5em;
+    top: 47%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+input[type="email"]:focus:valid ~ .tick {
+    opacity: 1;
+}
+
+input[type="email"]:focus:invalid ~ .cross {
+    opacity: 1;
+}
+
+#mensaje-contraseña {
+  color: #c00;
+  font-size: 10px;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+input:focus:invalid:not(:placeholder-shown) ~ #mensaje-contraseña {
+  opacity: 1;
+  height: auto;
+}

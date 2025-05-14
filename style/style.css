@@ -137,7 +137,7 @@ header nav ul li a:hover {
 }
 
 .container_main {
-    background-image: url('/source/fondo.jpg');
+    background-image: url('../source/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -325,6 +325,7 @@ header nav ul li a:hover {
     align-items: center;
     width: 200px;
     border: 2px solid white;
+    text-decoration: none;
 }
 
 #mas:hover {
@@ -344,7 +345,7 @@ header nav ul li a:hover {
 }
 
 #algodon {
-    background-image: url("/source/algodon.jpg");
+    background-image: url("../source/algodon.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -372,6 +373,7 @@ header nav ul li a:hover {
     padding-bottom: 10px;
     border-radius: 100px;
     transition: background-color 0.8s;
+    text-decoration: none;
 }
 
 #algodon a:hover {
@@ -381,7 +383,7 @@ header nav ul li a:hover {
 }
 
 #sandias {
-    background-image: url("/source/sandias.jpg");
+    background-image: url("../source/sandias.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -401,6 +403,7 @@ header nav ul li a:hover {
     transition: background-color 0.8s;
     padding: 10px;
     border-radius: 100px;
+    text-decoration: none;
 }
 
 #sandias a:hover {

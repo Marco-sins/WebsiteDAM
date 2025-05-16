@@ -237,7 +237,7 @@ body{
     margin-top: 15px;
 }
 
-.tick, .cross {
+#tick, #cross {
     position: absolute;
     right: 0.5em;
     top: 45%;
@@ -245,14 +245,6 @@ body{
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
     pointer-events: none;
-}
-
-input[type="email"]:focus:valid ~ .tick {
-    opacity: 1;
-}
-
-input[type="email"]:focus:invalid ~ .cross {
-    opacity: 1;
 }
 
 #mensaje-contraseña, #mensaje-pw2 {

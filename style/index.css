@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     /*overflow-x: hidden;*/
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -157,7 +160,7 @@ header nav ul li a:hover {
 .container_main h1 {
     width: 400px;
     margin: 1%;
-    font-size: 80px;
+    font-size: 70px;
 }
 
 .container_main h2 {
@@ -355,14 +358,14 @@ header nav ul li a:hover {
 }
 
 #algodon h5 {
-    font-size: 70px;
+    font-size: 60px;
 }
 
 #algodon h4 {
     padding-top: 5px;
     margin-top: 40px;
     margin-bottom: 200px;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 #algodon a {
@@ -393,7 +396,7 @@ header nav ul li a:hover {
 }
 
 #sandias h2 {
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 255px;
 }
 

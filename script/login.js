@@ -21,49 +21,66 @@ pw2.addEventListener('input', () => {
 });
 
 pw.addEventListener('input', () => {
+    verificar_contraseña();
+});
+
+pw2.addEventListener('blur', () => {
     comparar_contraseñas();
+});
+
+pw.addEventListener('blur', () => {
     verificar_contraseña();
 });
 
 function comparar_contraseñas()
 {
-    if (pw2.value != pw.value)
-    {
-        msg_pw2.style.opacity = '1';
-        msg_pw2.style.height = '15px';
-        msg_pw2.style.width = '100%';
-    }
-    else
-    {
-        msg_pw2.style.opacity = '0';
-        msg_pw2.style.height = '15px';
-        msg_pw2.style.width = '100%';
-    }
+    msg_pw2.style.opacity = pw2.value != pw.value ? '1' : '0';
+    msg_pw2.style.height = pw2.value != pw.value ? '15px' : '0';
+    msg_pw2.style.width = pw2.value != pw.value ? '100%' : '0';
 }
 
 function verificar_contraseña() 
 {
-    if (pw.value.length < 8)
-    {
-        msg_pw.style.opacity = '1';
-        msg_pw.style.height = '15px';
-        msg_pw.style.width = '100%';
-    }
-    else
-    {
-        msg_pw.style.opacity = '0';
-        msg_pw.style.height = '15px';
-        msg_pw.style.width = '100%';
-    }
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])(?!\s)[a-zA-Z\d#$@!%&*?]{8,16}$/;
+    const valido = regex.test(pw.value);
+    const vacio = pw.value.length;
+    
+    msg_pw.style.opacity = !valido && vacio != 0 ? '1' : '0';
+    msg_pw.style.height = !valido && vacio != 0 ? '40px' : '0';
+    msg_pw.style.width = !valido && vacio != 0 ? '100%' : '0';
 }
 
 const form = document.querySelector('form');
-const finish = document.getElementsById('boton_registro');
+const finish = document.getElementById('boton_registro');
 
 finish.addEventListener('click', (e) => {
     e.preventDefault();
     if (!form.checkValidity())
-    {
         alert('Faltan campos por rellenar');
-    }
+    else
+        form.submit();
 })
+
+const email = document.getElementById('email');
+const tick = document.getElementById('tick');
+const cross = document.getElementById('cross');
+
+email.addEventListener('input', () => {
+    const str = email.value;
+    if (validar_email(str))
+        mover_email(true);
+    else
+        mover_email(false);
+})
+
+function validar_email(email)
+{
+    const regex = /^[a-z]{7}[0-9]{4}@g\.educaand\.es$/;
+    return regex.test(email.trim());
+}
+
+function mover_email(bool)
+{
+    tick.style.opacity = bool ? '1' : '0';
+    cross.style.opacity = bool ? '0' : '1';
+}

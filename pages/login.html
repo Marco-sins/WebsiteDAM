@@ -23,11 +23,11 @@
                 </div>
                 <span>o utiliza tu correo electrónico para registrarte</span>
                 <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Email" required>
-                <span class="tick">✅</span>
-                <span class="cross">❌</span>
+                <input type="email" placeholder="Email" required id="email">
+                <span id="tick">✔️</span>
+                <span id="cross">❌</span>
                 <input type="password" placeholder="Contraseña" required pattern=".{8,}" id="pw">
-                <span id="mensaje-contraseña">La contraseña debe tener al menos 8 caracteres</span>
+                <span id="mensaje-contraseña">La contraseña debe tener entre 8 y 16 caracteres, una minuscula, una mayúscula, un número, un caracter especial y no puede tener espacios</span>
                 <input type="password" placeholder="Repetir contraseña" required id="pw2">
                 <span id="mensaje-pw2">Las contraseñas deben ser iguales</span>
                 <label id="condiciones">
@@ -48,8 +48,6 @@
                 </div>
                 <span>o usa la contraseña de su email</span>
                 <input type="email" placeholder="Email" required>
-                <span class="tick">✅</span>
-                <span class="cross">❌</span>
                 <input id="contraseña-registro" type="password" placeholder="Contraseña" required>
                 <a href="#">He olvidado mi contraseña</a>
                 <button class="boton-ver">Sign In</button>
